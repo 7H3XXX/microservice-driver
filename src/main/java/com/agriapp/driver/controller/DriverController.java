@@ -1,7 +1,9 @@
 //package
+
 package com.agriapp.driver.controller;
 
 //Libraries
+
 import com.agriapp.driver.dto.DriverRequestDTO;
 import com.agriapp.driver.dto.DriverResponseDTO;
 import com.agriapp.driver.services.DriverService;
@@ -17,8 +19,7 @@ public class DriverController {
         this.driverService = driverService;
     }
 
-    @RequestMapping(value = "/add", produces = {"application/json", "application/xml"})
-    @ResponseBody
+    @PostMapping(path = "/add")
     DriverResponseDTO addDriver(@RequestBody DriverRequestDTO dto){
         return driverService.addDriver(dto);
     }

@@ -63,7 +63,7 @@ public class Driver {
 
     @Column(nullable = false)
     private String telephone;
-
+    
     @Column
     private String address;
 
